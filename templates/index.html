@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Work Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#achievements">Achievements</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="home" class="container mt-5 pt-5">
+        <div class="jumbotron mt-5 text-center">
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" class="rounded-circle" alt="Profile Image" width="150" height="150">
+            <h1 class="display-4">Hello, I'm Saroj Kumar Myakala!</h1>
+            <p class="lead">Python Developer</p>
+            <hr class="my-4">
+            <p>Get in touch with me.</p>
+            <a class="btn btn-primary btn-lg" href="#contact" role="button">Contact Me</a>
+        </div>
+    </div>
+
+    <div id="skills" class="container mt-5">
+        <h2>Skills</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <ul>
+                    <li>Python</li>
+                    <li>FastAPI</li>
+                    <li>OpenAI</li>
+                    <li>PostgreSQL</li>
+                    <li>AWS Lambda</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>AWS S3</li>
+                    <li>AWS RDS</li>
+                    <li>Pandas</li>
+                    <li>LLM</li>
+                    <li>Docker</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>VectorDB</li>
+                    <li>Langchain</li>
+                    <li>Azure AI</li>
+                    <li>Generative AI</li>
+                    <li>Flask</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul>
+                    <li>MySQL</li>
+                    <li>Pytest</li>
+                    <li>GIT</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience" class="container mt-5">
+        <h2>Work Experience</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Python Developer, Accenture</h3>
+                <p><strong>October 2021 - Present, Hyderabad</strong></p>
+                <ul>
+                    <li>Developed APIs for insurance portal using Python and AWS Lambda.</li>
+                    <li>Extracted data from Google marketing platforms such as GA4 and CM360 by integrating their APIs and built target audiences for marketing campaigns.</li>
+                    <li>Developed a connector to transfer data from BigQuery to S3.</li>
+                    <li>Developed chatbot by leveraging OpenAI,Large language models and Chroma DB.</li>
+                    <li>Worked on Chatbot testing using Cosine Similarity, Python, and Sentence transformers.</li>
+                    <li>Generated unit test scripts using Python and Azure Open AI service.</li>
+                    <li>Provided sessions on prompt engineering and generative AI.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="projects" class="container mt-5">
+        <h2>Projects</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h3>THIG Insurance</h3>
+                <ul>
+                    <li>Developed APIs for an insurance portal using Python and AWS Lambda.</li>
+                    <li>Utilized AWS RDS for data storage.</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Accenture CIO (Generative AI)</h3>
+                <ul>
+                    <li>Developed a chatbot where users can upload documents and query based on it.</li>
+                    <li>Utilized Chroma DB Lang chain as the vector DB to store document embeddings uploaded by users.</li>
+                    <li>Leveraged Open AI LLM for data retrieval from Chroma DB based on user prompts.</li>
+                    <li>Utilized Azure Blob Storage for storing user-uploaded documents and Azure Application Insights for logging application activities.</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Relevance Engine (Data Engineer)</h3>
+                <ul>
+                    <li>Developed organization level APIs for Admin flow work in RE using Python and FastAPI framework</li>
+                    <li>Utilized PostgreSQL to organize and store essential application data.</li>
+                    <li>Extracted data from Google marketing platforms such as GA4 and CM360 by integrating their APIs and built target audiences for marketing campaigns.</li>
+                    <li>Developed a connector to transfer data from BigQuery to S3.</li>
+                    <li>Developed ALT text generation API for the HTML files using the BLIP LLM model.</li>
+                    <li>Implemented unit test cases to ensure the functionality and reliability of the APIs.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="achievements" class="container mt-5">
+        <h2>Achievements</h2>
+        <ul>
+            <li>Operations Excellence Winner (October 2023 - November 2023)</li>
+        </ul>
+    </div>
+    
+
+    <div id="contact" class="container mt-5">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong> sarojmekala@gmail.com</p>
+        <p><strong>Phone:</strong> +91 9618949809</p>
+        <p><strong>Location:</strong> Hyderabad, India</p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/saroj-kumar-555571174" target="_blank">Saroj Kumar Myakala</a></p>
+    </div>
+
+    <!-- Tawk.to Chatbot Widget -->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function(){
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/YOUR_TAWKTO_PROPERTY_ID/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
